@@ -1,0 +1,24 @@
+## Where the samples will be written
+save_data: "/content/drive/MyDrive/Software_Engineering/CodeRelated/Translation/EN-NL/data/samples"
+## Where the vocab(s) will be written
+src_vocab: "/content/drive/MyDrive/Software_Engineering/CodeRelated/Translation/EN-NL/data/vocab.src"
+tgt_vocab: "/content/drive/MyDrive/Software_Engineering/CodeRelated/Translation/EN-NL/data/vocab.trg"
+share_vocab: false
+overwrite: true
+# Corpus opts:
+data:
+    corpus_0:
+        path_src: "/content/drive/MyDrive/Software_Engineering/CodeRelated/Translation/EN-NL/data/train.tok.clean.sw.src"
+        path_tgt: "/content/drive/MyDrive/Software_Engineering/CodeRelated/Translation/EN-NL/data/train.tok.clean.sw.trg"
+    valid:
+        path_src: "/content/drive/MyDrive/Software_Engineering/CodeRelated/Translation/EN-NL/data/dev.tok.clean.sw.src"
+        path_tgt: "/content/drive/MyDrive/Software_Engineering/CodeRelated/Translation/EN-NL/data/dev.tok.clean.sw.trg"
+
+### Transform related opts:
+#### Filter
+src_seq_length: 150
+tgt_seq_length: 150
+
+# silently ignore empty lines in the data
+skip_empty_level: silent
+n_sample: -1
