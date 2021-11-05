@@ -1,0 +1,9 @@
+model: /content/drive/MyDrive/Software_Engineering/CodeRelated/Translation/EN-NL/models/model_step_5000.pt
+src: /content/drive/MyDrive/Software_Engineering/CodeRelated/Translation/EN-NL/data/test.tok.clean.src
+n_best: 1
+min_length: 0
+max_length: 150
+beam_size: 6
+verbose: true
+report_time: true
+output: /content/drive/MyDrive/Software_Engineering/CodeRelated/Translation/EN-BG/data/test.tok.clean.src.out

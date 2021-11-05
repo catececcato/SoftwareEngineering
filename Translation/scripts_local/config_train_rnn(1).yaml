@@ -1,0 +1,48 @@
+# General opts
+data:
+    corpus_0:
+        path_src: "/content/drive/MyDrive/Software_Engineering/CodeRelated/Translation/scripts_local/train.tok.clean.src"
+        path_tgt: "/content/drive/MyDrive/Software_Engineering/CodeRelated/Translation/scripts_local/train.tok.clean.trg"
+    valid:
+        path_src: "/content/drive/MyDrive/Software_Engineering/CodeRelated/Translation/scripts_local/dev.tok.clean.src"
+        path_tgt: "/content/drive/MyDrive/Software_Engineering/CodeRelated/Translation/scripts_local/test.tok.clean.src"
+
+### Transform related opts:
+#### Subword
+share_vocab: false
+src_vocab: "/content/drive/MyDrive/Software_Engineering/CodeRelated/Translation/scripts_local/vocab.src"
+tgt_vocab: "/content/drive/MyDrive/Software_Engineering/CodeRelated/Translation/scripts_local/vocab.trg"
+
+save_model: "/content/drive/MyDrive/Software_Engineering/CodeRelated/Translation/EN-NL/model"
+save_checkpoint_steps: 3000
+keep_checkpoint: 10
+seed: 3435
+train_steps: 100000
+valid_steps: 3000
+warmup_steps: 2000
+report_every: 100
+
+decoder_type: rnn
+encoder_type: rnn
+word_vec_size: 512
+rnn_type: LSTM
+rnn_size: 512
+enc_layers: 4
+dec_layers: 4
+
+optim: adam
+adam_beta1: 0.9
+adam_beta2: 0.998
+decay_method: noam
+learning_rate: 0.2
+max_grad_norm: 0.0
+
+batch_size: 64
+batch_type: sents
+global_attention: 'mlp'
+dropout: 0.2
+label_smoothing: 0.1
+
+world_size: 1
+gpu_ranks:
+- 0
