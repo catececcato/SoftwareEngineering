@@ -2,7 +2,6 @@
 # coding: utf-8
 
 # In[55]:
-# Git test 1
 
 import requests
 import json
